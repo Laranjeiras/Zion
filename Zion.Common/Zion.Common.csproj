@@ -2,6 +2,8 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <Authors>Alexandre Laranjeiras</Authors>
+    <PackageId>d1102445-133d-44c9-87f4-a11da7c11e86</PackageId>
   </PropertyGroup>
 
 </Project>
