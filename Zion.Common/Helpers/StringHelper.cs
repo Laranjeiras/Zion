@@ -9,5 +9,14 @@ namespace Zion.Common.Helpers
         {
             return string.IsNullOrEmpty(value) ? null : new String(value.Where(Char.IsDigit).ToArray());
         }
+
+        public static string AdjustString(string text, int size)
+        {
+            if (text == null) return null;
+            if (size <= 0) return text;
+            if (text.Length > size)
+                text = text.Substring(0, size - 1);
+            return text;
+        }
     }
 }
