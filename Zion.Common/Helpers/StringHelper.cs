@@ -18,5 +18,10 @@ namespace Zion.Common.Helpers
                 text = text.Substring(0, size - 1);
             return text;
         }
+
+        public static bool IsNullOrEmptyOrWhiteSpace(string value)
+        {
+            return (string.IsNullOrEmpty(value) || string.IsNullOrWhiteSpace(value));
+        }
     }
 }
