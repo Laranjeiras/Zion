@@ -3,7 +3,13 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <Authors>Alexandre Laranjeiras</Authors>
-    <PackageId>d1102445-133d-44c9-87f4-a11da7c11e86</PackageId>
+    <PackageId>363dbd84-da1e-4af5-ac37-c9ebefe0d618</PackageId>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <PackageProjectUrl>https://github.com/Laranjeiras/Zion</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/Laranjeiras/Zion</RepositoryUrl>
+    <PackageTags>Helpers  Extensions</PackageTags>
+    <NeutralLanguage />
   </PropertyGroup>
 
   <ItemGroup>
