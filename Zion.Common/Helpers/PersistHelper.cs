@@ -31,7 +31,7 @@ namespace Zion.Common.Helpers
             }
         }
 
-        public object DBNullHandler(object instance)
+        public static object DBNullHandler(object instance)
         {
             if (instance != null)
                 return instance;
