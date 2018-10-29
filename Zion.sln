@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.27703.2042
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Zion.Common", "Zion.Common\Zion.Common.csproj", "{3C1E0100-CBD6-490C-8501-62E68B548AE6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zion.Common.Test", "Zion.Common.Test\Zion.Common.Test.csproj", "{B801BA8D-4665-4B4F-9B31-6DC92999FE7D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{3C1E0100-CBD6-490C-8501-62E68B548AE6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3C1E0100-CBD6-490C-8501-62E68B548AE6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3C1E0100-CBD6-490C-8501-62E68B548AE6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B801BA8D-4665-4B4F-9B31-6DC92999FE7D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B801BA8D-4665-4B4F-9B31-6DC92999FE7D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B801BA8D-4665-4B4F-9B31-6DC92999FE7D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B801BA8D-4665-4B4F-9B31-6DC92999FE7D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
