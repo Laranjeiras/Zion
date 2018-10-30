@@ -10,12 +10,13 @@
     <RepositoryUrl>https://github.com/Laranjeiras/Zion</RepositoryUrl>
     <PackageTags>Helpers  Extensions</PackageTags>
     <NeutralLanguage />
-    <Version>1.0.1</Version>
+    <Version>1.0.2</Version>
     <Copyright>@laranjeiras</Copyright>
     <Description>Contato:
 laranja22@hotmail.com</Description>
     <PackageReleaseNotes>316d4b57-40e2-4604-98ca-20129fb672df</PackageReleaseNotes>
     <Company>Ltec Informática</Company>
+    <AssemblyVersion>1.0.2.0</AssemblyVersion>
   </PropertyGroup>
 
   <ItemGroup>
