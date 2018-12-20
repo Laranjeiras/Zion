@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Zion.Common.Assertions
 {
@@ -13,7 +11,5 @@ namespace Zion.Common.Assertions
                 throw new Exception(message);
             }
         }
-
-
     }
 }
