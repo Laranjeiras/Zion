@@ -9,7 +9,7 @@ namespace Zion.Common.Helpers
         {
             if (StringHelper.IsNullOrEmptyOrWhiteSpace(valor)) return null;
 
-            valor = valor.TrimEnd().Trim().TrimStart();
+            valor = valor.Trim();
 
             if (toUpperCase)
                 valor = valor.ToUpper();
