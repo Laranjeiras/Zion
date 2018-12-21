@@ -49,9 +49,13 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Helpers_Tests\PhoneHelper_Test.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StringHelper_Test.cs" />
     <Compile Include="InscricaoEstadualValidation_Test.cs" />
+    <Compile Include="Telefone\PhoneExtension_Test.cs" />
+    <Compile Include="Telefone\PhoneVO_Test.cs" />
+    <Compile Include="Validations_Tests\PhoneValidation_Test.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
