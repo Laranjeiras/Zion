@@ -50,6 +50,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assertions\ZionAssertion_Test.cs" />
+    <Compile Include="Extensions\DateTime_Test.cs" />
     <Compile Include="Helpers_Tests\PhoneHelper_Test.cs" />
     <Compile Include="Helpers_Tests\StringHelper_Test.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
