@@ -60,6 +60,7 @@
     <Compile Include="Telefone\PhoneVO_Test.cs" />
     <Compile Include="Validations_Tests\PhoneValidation_Test.cs" />
     <Compile Include="ValueObjects\CpfCnpj_Test.cs" />
+    <Compile Include="ValueObjects\Cep_Test.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
