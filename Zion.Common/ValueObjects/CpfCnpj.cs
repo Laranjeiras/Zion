@@ -9,7 +9,7 @@ namespace Zion.Common.ValueObjects
 
         public string Value { get; set; }
 
-        public Pessoa Tipo => Single().Length == 11 ? Pessoa.Fisica : Pessoa.Juridica;
+        public Pessoa Type => Single().Length == 11 ? Pessoa.Fisica : Pessoa.Juridica;
 
         public enum Pessoa
         {
