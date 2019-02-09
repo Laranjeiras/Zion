@@ -69,5 +69,17 @@ namespace Zion.Common.Test.Assertions
         {
             Zion.Common.Assertions.ZionAssertion.StringIsNullOrEmptyOrWhiteSpace(string.Empty);
         }
+
+        [TestMethod]
+        public void Email_Invalid()
+        {
+            Assert.IsFalse(Zion.Common.Assertions.ZionAssertion.EmailIsValid("string"));
+        }
+
+        [TestMethod]
+        public void Email_Valid()
+        {
+            Zion.Common.Assertions.ZionAssertion.EmailIsValid("laranja22@hotmail.com");
+        }
     }
 }
