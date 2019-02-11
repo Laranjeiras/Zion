@@ -51,6 +51,20 @@ namespace Zion.Common.Test.Assertions
 
         [TestMethod]
         [ExpectedException(typeof(Exception))]
+        public void StringHasLen_Invalid()
+        {
+            Zion.Common.Assertions.ZionAssertion.StringHasLen("string", 5);
+        }
+
+        [TestMethod]
+        public void StringHasLen_Valid()
+        {
+            Zion.Common.Assertions.ZionAssertion.StringHasLen("string", 6);
+        }
+
+
+        [TestMethod]
+        [ExpectedException(typeof(Exception))]
         public void StringIsNullOrEmptyOrWhiteSpace_Whitespace()
         {
             Zion.Common.Assertions.ZionAssertion.StringIsNullOrEmptyOrWhiteSpace("   ");

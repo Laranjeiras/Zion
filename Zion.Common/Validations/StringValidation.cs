@@ -12,9 +12,25 @@ namespace Zion.Common.Validations
                 Assertions.StringAssertion.IsNullOrEmptyOrWhiteSpace(value);
                 return false;
             }
-            catch(Exception)
+            catch (Exception)
             {
                 return true;
+            }
+        }
+    }
+
+    public partial class ZionValidation
+    {
+        public static bool StringHasLen(string value, int len)
+        {
+            try
+            {
+                Assertions.ZionAssertion.StringHasLen(value, len);
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
             }
         }
     }

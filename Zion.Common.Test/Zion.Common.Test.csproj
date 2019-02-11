@@ -51,6 +51,7 @@
   <ItemGroup>
     <Compile Include="Assertions\ZionAssertion_Test.cs" />
     <Compile Include="Extensions\DateTime_Test.cs" />
+    <Compile Include="Extensions\String_Test.cs" />
     <Compile Include="Helpers_Tests\PhoneHelper_Test.cs" />
     <Compile Include="Helpers_Tests\StringHelper_Test.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -59,6 +60,7 @@
     <Compile Include="Telefone\PhoneExtension_Test.cs" />
     <Compile Include="Telefone\PhoneVO_Test.cs" />
     <Compile Include="Validations_Tests\PhoneValidation_Test.cs" />
+    <Compile Include="Validations_Tests\ZionValidation_Test.cs" />
     <Compile Include="ValueObjects\CpfCnpj_Test.cs" />
     <Compile Include="ValueObjects\Cep_Test.cs" />
   </ItemGroup>

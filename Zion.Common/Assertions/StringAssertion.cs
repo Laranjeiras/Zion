@@ -19,5 +19,12 @@ namespace Zion.Common.Assertions
             if (string.IsNullOrEmpty(value) || string.IsNullOrWhiteSpace(value))
                 throw new Exception(message);
         }
+
+        public static void StringHasLen(string value, int len, string message = "Invalid Len")
+        {
+            if (value == null) return;
+            if (string.IsNullOrEmpty(value) || value.Length != len)
+                throw new Exception(message);
+        }
     }
 }
