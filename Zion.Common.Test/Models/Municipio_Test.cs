@@ -9,14 +9,14 @@ namespace Zion.Common.Test.Models
         [TestMethod]
         public void Municipio_New()
         {
-            var mun = new Municipio(3302700,"Maricá", new UF(33,"RJ", "Rio de Janeiro"));
+            var mun = new Municipality(3302700,"Maricá", new UF(33,"RJ", "Rio de Janeiro"));
             Assert.IsNotNull(mun);
         }
     }
 
-    public class Municipio : BaseMunicipio
+    public class Municipality : BaseMunicipality
     {
-        public Municipio(int idMunicipio, string nome, BaseUF uf) : base(idMunicipio, nome, uf)
+        public Municipality(int idMunicipality, string nome, BaseUF uf) : base(idMunicipality, nome, uf)
         {
         }
     }

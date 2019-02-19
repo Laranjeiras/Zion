@@ -1,8 +1,8 @@
 ﻿namespace Zion.Common.Models
 {
-    public abstract class BaseMunicipio
+    public abstract class BaseMunicipality
     {
-        public int IdMunicipio { get; protected set; }
+        public int IdMunicipality { get; protected set; }
 
         public string Name { get; protected set; }
 
@@ -10,14 +10,14 @@
 
         public BaseUF UF { get; set; }
 
-        protected BaseMunicipio()
+        protected BaseMunicipality()
         {
 
         }
 
-        public BaseMunicipio(int idMunicipio, string name, BaseUF uf)
+        public BaseMunicipality(int idMunicipality, string name, BaseUF uf)
         {
-            IdMunicipio = idMunicipio;
+            IdMunicipality = idMunicipality;
             Name = name;
             IdUF = uf.IdUF;
             UF = uf;
@@ -30,18 +30,18 @@
 
         public override bool Equals(object obj)
         {
-            var model = obj as BaseMunicipio;
+            var model = obj as BaseMunicipality;
 
             return model != null &&
-                model.IdMunicipio == IdMunicipio;
+                model.IdMunicipality == IdMunicipality;
         }
 
         public override int GetHashCode()
         {
-            return IdMunicipio * 30;
+            return IdMunicipality * 30;
         }
 
-        public static bool operator ==(BaseMunicipio objetoA, BaseMunicipio objetoB)
+        public static bool operator ==(BaseMunicipality objetoA, BaseMunicipality objetoB)
         {
             if (ReferenceEquals(objetoA, null) && ReferenceEquals(objetoB, null))
                 return true;
@@ -52,7 +52,7 @@
             return true;
         }
 
-        public static bool operator !=(BaseMunicipio objetoA, BaseMunicipio objetoB)
+        public static bool operator !=(BaseMunicipality objetoA, BaseMunicipality objetoB)
         {
             return !(objetoA == objetoB);
         }

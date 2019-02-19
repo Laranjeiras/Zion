@@ -14,7 +14,7 @@ namespace Zion.Common.Models
         {
             IdUF = idUF;
             Initials = initials;
-            Nome = name;
+            Name = name;
         }
 
         public int IdUF { get; set; }
@@ -36,6 +36,6 @@ namespace Zion.Common.Models
             }
         }
 
-        public string Nome { get; set; }
+        public string Name { get; set; }
     }
 }
