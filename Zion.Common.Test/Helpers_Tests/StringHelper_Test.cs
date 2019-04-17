@@ -29,5 +29,38 @@ namespace Zion.Common.Test.Helpers_Tests
             Assert.AreEqual("abcde", Helpers.StringHelper.MaxLength("abcdef", 5));
             Assert.AreEqual("abcde", Helpers.StringHelper.MaxLength(" abcdef  ", 5));
         }
+
+        [TestMethod]
+        public void Between_Null_src() 
+        {
+            Assert.AreEqual(string.Empty, Helpers.StringHelper.Between(null, "a", "z"));
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentNullException))]
+        public void Between_Null_start()
+        {
+            Assert.AreEqual(string.Empty, Helpers.StringHelper.Between("abcdefghijklmnopqrstuvxyz", null, "z"));
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentNullException))]
+        public void Between_Null_end()
+        {
+            Assert.AreEqual(string.Empty, Helpers.StringHelper.Between("abcdefghijklmnopqrstuvxyz", "a", null));
+        }
+
+        [TestMethod]
+        public void Between_empty_Ad()
+        {
+            Assert.AreEqual(string.Empty, Helpers.StringHelper.Between("abcdefghijklmnopqrstuvxyz", "A", "d"));
+        }
+
+        [TestMethod]
+        public void Between_def()
+        {
+            Assert.AreEqual("e", Helpers.StringHelper.Between("abcdefghijklmnopqrstuvxyz", "d", "f"));
+            Assert.AreEqual("bc", Helpers.StringHelper.Between("abcdefghijklmnopqrstuvxyz", "a", "d"));
+        }
     }
 }
