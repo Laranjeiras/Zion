@@ -54,6 +54,7 @@
     <Compile Include="Extensions\String_Test.cs" />
     <Compile Include="Helpers_Tests\PhoneHelper_Test.cs" />
     <Compile Include="Helpers_Tests\StringHelper_Test.cs" />
+    <Compile Include="Models\Company_Test.cs" />
     <Compile Include="Models\Municipio_Test.cs" />
     <Compile Include="Models\UF_Test.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
