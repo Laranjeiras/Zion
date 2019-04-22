@@ -62,6 +62,7 @@
     <Compile Include="Phone\PhoneExtension_Test.cs" />
     <Compile Include="Phone\PhoneVO_Test.cs" />
     <Compile Include="Validations_Tests\PhoneValidation_Test.cs" />
+    <Compile Include="Validations_Tests\EmailValidation_Test.cs" />
     <Compile Include="Validations_Tests\ZionValidation_Test.cs" />
     <Compile Include="ValueObjects\CpfCnpj_Test.cs" />
     <Compile Include="ValueObjects\Cep_Test.cs" />
