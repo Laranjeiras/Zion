@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
@@ -10,16 +10,16 @@
     <RepositoryUrl>https://github.com/Laranjeiras/Zion</RepositoryUrl>
     <PackageTags>Helpers  Extensions</PackageTags>
     <NeutralLanguage />
-    <Version>1.1.42</Version>
+    <Version>1.1.43</Version>
     <Copyright>@laranjeiras</Copyright>
     <Description>Contato:
 laranja22@hotmail.com
 www.laranjeiras.dev</Description>
     <PackageReleaseNotes>316d4b57-40e2-4604-98ca-20129fb672df</PackageReleaseNotes>
     <Company>Ltec Informática</Company>
-    <AssemblyVersion>1.1.42.0</AssemblyVersion>
+    <AssemblyVersion>1.1.43.0</AssemblyVersion>
     <ApplicationIcon>ZionLogo.ico</ApplicationIcon>
-    <FileVersion>1.1.42.0</FileVersion>
+    <FileVersion>1.1.43.0</FileVersion>
   </PropertyGroup>
 
   <ItemGroup>
