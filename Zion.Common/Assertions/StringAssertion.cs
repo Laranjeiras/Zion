@@ -26,5 +26,17 @@ namespace Zion.Common.Assertions
             if (string.IsNullOrEmpty(value) || value.Length != len)
                 throw new Exception(message);
         }
+
+        public static void StringHasMinLen(string value, int len, string message="Invalid HasMinLen") 
+        {
+            if (string.IsNullOrEmpty(value) || value.Length < len)
+                throw new Exception(message);
+        }
+
+        public static void StringHasMaxLen(string value, int len, string message="Invalid HasMaxLen") 
+        {
+            if (string.IsNullOrEmpty(value) || value.Length > len)
+                throw new Exception(message);
+        }
     }
 }
