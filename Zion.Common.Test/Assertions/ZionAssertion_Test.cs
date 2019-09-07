@@ -97,5 +97,36 @@ namespace Zion.Common.Test.Assertions
         {
             ZionAssertion.StringIsNullOrEmptyOrWhiteSpace(string.Empty);
         }
+
+        #region Numeric
+
+        [TestMethod]
+        [ExpectedException(typeof(Exception))]
+        public void NumericIsBiggerThen_Decimal_Fail()
+        {
+            ZionAssertion.IsBiggerThen(2.0m, 5.0m);
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(Exception))]
+        public void NumericIsBiggerThen_Long_Fail()
+        {
+            ZionAssertion.IsBiggerThen(2, 5);
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(Exception))]
+        public void NumericIsBiggerThen_Decimal_Ok()
+        {
+            ZionAssertion.IsBiggerThen(2.0m, 1.0m);
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(Exception))]
+        public void NumericIsBiggerThen_Long_OK()
+        {
+            ZionAssertion.IsBiggerThen(2, 1);
+        }
+        #endregion
     }
 }

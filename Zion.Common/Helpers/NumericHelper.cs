@@ -15,5 +15,19 @@
                 return true;
             return false;
         }
+
+        public static bool IsBiggerThen(decimal value, decimal min) 
+        {
+            if (value > min)
+                return true;
+            return false;
+        }
+
+        public static bool IsBiggerThen(long value, decimal min)
+        {
+            if (value > min)
+                return true;
+            return false;
+        }
     }
 }
