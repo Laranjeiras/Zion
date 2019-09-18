@@ -7,9 +7,9 @@ namespace Zion.Common.ValueObjects
     {
         public const bool IS_REQUIRED = false;
 
-        public string Value { get; set; }
+        public string Value { get; protected set; }
 
-        public Pessoa Type => Single().Length == 11 ? Pessoa.Fisica : Pessoa.Juridica;
+        public Pessoa Tipo => Single()?.Length == 11 ? Pessoa.Fisica : Pessoa.Juridica;
 
         public enum Pessoa
         {
@@ -24,7 +24,6 @@ namespace Zion.Common.ValueObjects
 
         public CpfCnpj(string CpfCnpj)
         {
-
             if (IsValid(CpfCnpj) == false)
             {
                 throw new Exception("Cpf/Cnpj inválido!");
@@ -77,7 +76,6 @@ namespace Zion.Common.ValueObjects
             {
                 return false;
             }
-
         }
 
         public static void AssertValidation(string cpfCnpj, string message = "CPF/CNPJ inválido")
