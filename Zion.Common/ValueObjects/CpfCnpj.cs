@@ -7,9 +7,20 @@ namespace Zion.Common.ValueObjects
     {
         public const bool IS_REQUIRED = false;
 
-        public string Value { get; protected set; }
+        private string _value;
+        /// <summary>
+        /// Deveria ser Protected Set, porem isso impede de usar a serialização no JsonConverter
+        /// </summary>
+        public string Value
+        {
+            get { return _value; }
+            set
+            {
+                _value = Clean(value);
 
-        public Pessoa Tipo => Single()?.Length == 11 ? Pessoa.Fisica : Pessoa.Juridica;
+            }
+        }
+        public Pessoa Tipo => _value?.Length == 11 ? Pessoa.Fisica : Pessoa.Juridica;
 
         public enum Pessoa
         {
@@ -22,35 +33,28 @@ namespace Zion.Common.ValueObjects
             Value = null;
         }
 
-        public CpfCnpj(string CpfCnpj)
+        public CpfCnpj(string cpfCnpj)
         {
-            if (IsValid(CpfCnpj) == false)
+            if (IsValid(cpfCnpj) == false)
             {
                 throw new Exception("Cpf/Cnpj inválido!");
             }
 
-            Value = Clean(CpfCnpj);
+            Value = cpfCnpj;
         }
 
-        public string Single()
+        private string Full()
         {
-            if (IsValid(Value))
-                return Clean(Value);
-            return null;
-        }
+            if (!IsValid(Value) || Value == null) return null;
 
-        public string Full()
-        {
-            if (IsValid(Value) == false || Value == null) return null;
+            var tmp = Convert.ToInt64(Value);
 
-            var tmp = Convert.ToInt64(Single());
-
-            var retorno = string.Empty;
             if (Value.Length == 11)
-                retorno = string.Format(@"{0:000\.000\.000\-00}", tmp);
+                return string.Format(@"{0:000\.000\.000\-00}", tmp);
             else if (Value.Length == 14)
-                retorno = string.Format(@"{0:00\.000\.000\/0000\-00}", tmp);
-            return retorno;
+                return string.Format(@"{0:00\.000\.000\/0000\-00}", tmp);
+
+            throw new Exception("Ocorreu um erro ao gerar o CNPJ/CPF");
         }
 
         public string Formatted => Full();
