@@ -4,6 +4,7 @@ using System.Linq;
 
 namespace Zion.Common.ValueObjects
 {
+    [Serializable]
     public class Cep
     {
         public string Value { get; set; }

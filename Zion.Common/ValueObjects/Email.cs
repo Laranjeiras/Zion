@@ -4,9 +4,10 @@ using Zion.Common.Validations;
 
 namespace Zion.Common.ValueObjects
 {
+    [Serializable]
     public class Email
     {
-        public string Value { get; protected set; }
+        public string Value { get; set; }
 
         protected Email()
         {

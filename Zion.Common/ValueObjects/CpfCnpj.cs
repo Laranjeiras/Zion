@@ -3,6 +3,7 @@ using System.Collections.Generic;
 
 namespace Zion.Common.ValueObjects
 {
+    [Serializable]
     public class CpfCnpj
     {
         public const bool IS_REQUIRED = false;
@@ -17,7 +18,6 @@ namespace Zion.Common.ValueObjects
             set
             {
                 _value = Clean(value);
-
             }
         }
         public Pessoa Tipo => _value?.Length == 11 ? Pessoa.Fisica : Pessoa.Juridica;
