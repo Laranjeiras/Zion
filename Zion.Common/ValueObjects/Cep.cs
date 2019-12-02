@@ -34,6 +34,9 @@ namespace Zion.Common.ValueObjects
 
         public static bool IsValid(string cep)
         {
+            if (Helpers.StringHelper.IsNullOrEmptyOrWhiteSpace(cep))
+                return false;
+
             if (cep.Length == 8)
             {
                 cep = cep.Substring(0, 5) + "-" + cep.Substring(5, 3);
