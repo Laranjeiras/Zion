@@ -115,14 +115,12 @@ namespace Zion.Common.Test.Assertions
         }
 
         [TestMethod]
-        [ExpectedException(typeof(Exception))]
         public void NumericIsBiggerThen_Decimal_Ok()
         {
             ZionAssertion.IsBiggerThen(2.0m, 1.0m);
         }
 
         [TestMethod]
-        [ExpectedException(typeof(Exception))]
         public void NumericIsBiggerThen_Long_OK()
         {
             ZionAssertion.IsBiggerThen(2, 1);

@@ -16,7 +16,7 @@ namespace Zion.Common.Test.Models
             var insc = "84.295.76-0";
             var name = "GLOBO COMUNICACAO E PARTICIPACOES S/A";
             var socialName = "GCP,TV GLOBO, REDE GLOBO, GLOBO.COM, SOM LIVRE";
-            var email = new Email("globog1.com.br");
+            var email = new Email("globo@g1.com.br");
             var phone = new Phone("2140022884");
 
 

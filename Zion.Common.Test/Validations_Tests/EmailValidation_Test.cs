@@ -12,9 +12,10 @@ namespace Zion.Common.Test.Validations_Tests
         {
             string[] emails = { "@majjf.com", "A@b@c@example.com", "Abc.example.com", "js*@proseware.com", "js@proseware..com", "ma@@jjf.com",
                                 "ma@jjf.", "ma@jjf..com", "ma@jjf.c", "ma_@jjf", "ma_@jjf.","-------","j@proseware.com9","js#internal@proseware.com","js@proseware.com9",
-                                "js@proseware.com9", "ma@hostname.comcom", "MA@hostname.coMCom","ma.@jjf.com", "j_9@[129.126.118.1]"};
+                                "js@proseware.com9", "ma@hostname.comcom", "MA@hostname.coMCom"};
             foreach (var email in emails)
             {
+                System.Console.WriteLine("Validando ==>" + email);
                 Assert.IsFalse(ZionValidation.EmailValidation(email));
             }
         }
