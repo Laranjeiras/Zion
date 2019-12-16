@@ -8,14 +8,14 @@
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
     <PackageProjectUrl>https://github.com/Laranjeiras/Zion</PackageProjectUrl>
     <RepositoryUrl>https://github.com/Laranjeiras/Zion</RepositoryUrl>
-    <PackageTags>r</PackageTags>
+    <PackageTags>Helpers Extensions</PackageTags>
     <NeutralLanguage />
     <Version>1.1.464</Version>
     <Copyright>@laranjeiras</Copyright>
     <Description>Contato:
 laranja22@hotmail.com
 www.laranjeiras.dev</Description>
-    <PackageReleaseNotes>316d4b57-40e2-4604-98ca-20129fb672df</PackageReleaseNotes>
+    <PackageReleaseNotes></PackageReleaseNotes>
     <Company>Ltec Informática</Company>
     <AssemblyVersion>1.1.46.4</AssemblyVersion>
     <ApplicationIcon>ZionLogo.ico</ApplicationIcon>
