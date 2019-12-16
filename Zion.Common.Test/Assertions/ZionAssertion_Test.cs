@@ -64,6 +64,19 @@ namespace Zion.Common.Test.Assertions
         }
 
         [TestMethod]
+        public void StringHasLen_MinAndMax_Valid()
+        {
+            ZionAssertion.StringHasLen("string", 5, 6);
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(Exception))]
+        public void StringHasLen_MinAndMax_Invalid()
+        {
+            ZionAssertion.StringHasLen("string", 2, 4);
+        }
+
+        [TestMethod]
         [ExpectedException(typeof(Exception))]
         public void StringHasMinLen_Valid()
         {
