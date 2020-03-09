@@ -1,0 +1,34 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+      <Authors>Alexandre Laranjeiras</Authors>
+      <PackageId>Zion.Common</PackageId>
+      <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+      <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+      <PackageProjectUrl>https://github.com/Laranjeiras/Zion</PackageProjectUrl>
+      <RepositoryUrl>https://github.com/Laranjeiras/Zion</RepositoryUrl>
+      <PackageTags>Common Extensions</PackageTags>
+      <NeutralLanguage />
+      <Version>2.0.0</Version>
+      <Copyright>@laranjeiras</Copyright>
+      <Description>Contato:
+laranja22@hotmail.com
+www.laranjeiras.dev
+</Description>
+      <PackageReleaseNotes></PackageReleaseNotes>
+      <Company>Laranjeiras</Company>
+      <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      <ApplicationIcon>ZionLogo.ico</ApplicationIcon>
+      <FileVersion>2.0.0.0</FileVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Extensions\DateTime.Parts.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Extensions\DateTime.Parts.cs" />
+  </ItemGroup>
+
+</Project>
