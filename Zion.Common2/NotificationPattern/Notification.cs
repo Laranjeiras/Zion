@@ -1,9 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
-namespace Zion.Common2.Flunt
+namespace Zion.Common2.NotificationPattern
 {
-    [Obsolete("Replaced for NotificationPattern")]
     public class Notification
     {
         public Notification(string property, string message)
@@ -17,7 +15,7 @@ namespace Zion.Common2.Flunt
 
         public override bool Equals(object obj)
         {
-            var notification = obj as Validation;
+            var notification = obj as Notification;
             return notification != null &&
                    Property == notification.Property &&
                    Message == notification.Message;

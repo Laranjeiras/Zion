@@ -1,10 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 
-namespace Zion.Common2.Flunt
+namespace Zion.Common2.NotificationPattern
 {
-    [Obsolete("Replaced for NotificationPattern")]
     public abstract class Notifiable
     {
         private List<Notification> _notifications = new List<Notification>();

@@ -1,6 +1,6 @@
-﻿namespace Zion.Common2.Validations
+﻿namespace Zion.Common2.Checks
 {
-    public partial class ZionValidation
+    public partial class ZionCheck
     {
         /// <summary>
         /// Return True if value between or equal min and max

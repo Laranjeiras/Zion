@@ -1,8 +1,8 @@
 ﻿using System;
 
-namespace Zion.Common2.Validations
+namespace Zion.Common2.Checks
 {
-    public partial class ZionValidation
+    public partial class ZionCheck
     {
         public static bool IsNullOrEmpty(Guid? guid)
         {

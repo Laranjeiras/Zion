@@ -4,6 +4,7 @@ using System.Text;
 
 namespace Zion.Common2.Flunt
 {
+    [Obsolete("Replaced for NotificationPattern")]
     public class Validation
     {
         public Validation(string property, string message)
@@ -17,10 +18,10 @@ namespace Zion.Common2.Flunt
 
         public override bool Equals(object obj)
         {
-            var notification = obj as Validation;
-            return notification != null &&
-                   Property == notification.Property &&
-                   Message == notification.Message;
+            var validation = obj as Validation;
+            return validation != null &&
+                   Property == validation.Property &&
+                   Message == validation.Message;
         }
 
         public override int GetHashCode()

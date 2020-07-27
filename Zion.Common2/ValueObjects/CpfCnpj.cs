@@ -62,11 +62,11 @@ namespace Zion.Common2.ValueObjects
             return Helpers.ZionHelper.OnlyNumbers(cpfCnpj);
         }
 
-        public static bool IsValid(string cpfCnpj)
+        public static bool IsValid(string cpfCnpj, bool isRequired)
         {
-            if (string.IsNullOrEmpty(cpfCnpj) && IS_REQUIRED == false)
+            if (string.IsNullOrEmpty(cpfCnpj) && isRequired == false)
                 return true;
-            else if (string.IsNullOrEmpty(cpfCnpj) && IS_REQUIRED == true)
+            else if (string.IsNullOrEmpty(cpfCnpj) && isRequired == true)
                 return false;
 
             try
@@ -78,6 +78,11 @@ namespace Zion.Common2.ValueObjects
             {
                 return false;
             }
+        }
+
+        public static bool IsValid(string cpfCnpj)
+        {
+            return IsValid(cpfCnpj, IS_REQUIRED);
         }
 
         public static void AssertValidation(string cpfCnpj, string message = "CPF/CNPJ inválido")

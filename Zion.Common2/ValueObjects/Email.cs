@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using Zion.Common2.Validations;
+using Zion.Common2.Checks;
 
 namespace Zion.Common2.ValueObjects
 {
@@ -22,7 +22,7 @@ namespace Zion.Common2.ValueObjects
 
         private static bool IsValid(string value)
         {
-            return ZionValidation.EmailValidation(value);
+            return ZionCheck.EmailValidation(value);
         }
 
         public bool IsValid()

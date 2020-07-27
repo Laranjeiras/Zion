@@ -1,8 +1,8 @@
 ﻿using System.Text.RegularExpressions;
 
-namespace Zion.Common2.Validations
+namespace Zion.Common2.Checks
 {
-    public partial class ZionValidation
+    public partial class ZionCheck
     {
         public static bool EmailValidation(string email)
         {

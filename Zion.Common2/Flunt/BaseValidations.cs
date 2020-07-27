@@ -1,13 +1,25 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace Zion.Common2.Flunt
 {
+    [Obsolete("Replaced for NotificationPattern")]
     public abstract class BaseValidations
     {
         private List<Validation> _validations = new List<Validation>();
 
         public IReadOnlyCollection<Validation> Validations { get { return _validations; } }
+
+        public BaseValidations(Validation validation)
+        {
+            _validations.Add(validation);
+        }
+
+        public BaseValidations()
+        {
+
+        }
 
         public void AddValidation(string property, string message)
         {
