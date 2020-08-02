@@ -10,7 +10,7 @@
       <RepositoryUrl>https://github.com/Laranjeiras/Zion</RepositoryUrl>
       <PackageTags>Common Extensions</PackageTags>
       <NeutralLanguage />
-      <Version>2.0.2.3</Version>
+      <Version>2.0.2.4</Version>
       <Copyright>@laranjeiras</Copyright>
       <Description>Contato:
         laranja22@hotmail.com
@@ -19,9 +19,9 @@
       </Description>
       <PackageReleaseNotes></PackageReleaseNotes>
       <Company>Laranjeiras</Company>
-      <AssemblyVersion>2.0.2.3</AssemblyVersion>
+      <AssemblyVersion>2.0.2.4</AssemblyVersion>
       <ApplicationIcon>ZionLogo.ico</ApplicationIcon>
-      <FileVersion>2.0.2.3</FileVersion>
+      <FileVersion>2.0.2.4</FileVersion>
   </PropertyGroup>
 
 </Project>
