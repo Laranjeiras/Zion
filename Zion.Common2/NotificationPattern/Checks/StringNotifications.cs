@@ -1,8 +1,8 @@
 ﻿namespace Zion.Common2.NotificationPattern
 {
-    public partial class Notifications
+    public partial class Contract
     {
-        public Notifications IsNotNullOrEmpty(string val, string property, string message)
+        public Contract IsNotNullOrEmpty(string val, string property, string message)
         {
             if (Checks.ZionCheck.StringIsNullOrEmptyOrWhiteSpace(val))
                 AddNotification(property, message);
@@ -16,7 +16,7 @@
         /// <param name="minLength">If minLength = 0 return true if null</param>
         /// <param name="maxLength"></param>
         /// <param name="message"></param>
-        public Notifications StringHasLength(string text, int minLength, int maxLength, string property, string message)
+        public Contract StringHasLength(string text, int minLength, int maxLength, string property, string message)
         {
             if (!Checks.ZionCheck.StringHasLength(text, minLength, maxLength))
                 AddNotification(property, message);

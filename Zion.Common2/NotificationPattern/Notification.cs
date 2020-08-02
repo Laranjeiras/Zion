@@ -4,14 +4,16 @@ namespace Zion.Common2.NotificationPattern
 {
     public class Notification
     {
-        public Notification(string property, string message)
+        public Notification(string property, string message, bool ehError = true)
         {
             Property = property;
             Message = message;
+            EhError = ehError;
         }
 
         public string Property { get; private set; }
         public string Message { get; private set; }
+        public bool EhError { get; set; }
 
         public override bool Equals(object obj)
         {

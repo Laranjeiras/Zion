@@ -1,18 +1,16 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq.Expressions;
-using System.Text;
 
 namespace Zion.Common2.NotificationPattern
 {
-    public partial class Notifications : Notifiable
+    public partial class Contract : Notifiable
     {
-        public Notifications Requires()
+        public Contract Requires()
         {
             return this;
         }
 
-        public Notifications Join(params Notifiable[] items)
+        public Contract Join(params Notifiable[] items)
         {
             if (items != null)
             {
@@ -26,7 +24,7 @@ namespace Zion.Common2.NotificationPattern
             return this;
         }
 
-        public Notifications IfNotNull(object parameterType, Expression<Func<Notifications, Notifications>> contractExpression)
+        public Contract IfNotNull(object parameterType, Expression<Func<Contract, Contract>> contractExpression)
         {
             if (parameterType != null)
             {

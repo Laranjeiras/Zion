@@ -15,6 +15,11 @@ namespace Zion.Common2.NotificationPattern
             _notifications.Add(new Notification(property, message));
         }
 
+        public void AddNotification(string property, string message, bool ehError = true)
+        {
+            _notifications.Add(new Notification(property, message, ehError));
+        }
+
         public void AddNotification(Notification notification)
         {
             _notifications.Add(notification);
@@ -57,6 +62,6 @@ namespace Zion.Common2.NotificationPattern
                 _notifications.Remove(notification);
         }
 
-        public bool Valid => !_notifications.Any();
+        public bool Valid => !_notifications.Select(x => x.EhError == true).Any();
     }
 }
