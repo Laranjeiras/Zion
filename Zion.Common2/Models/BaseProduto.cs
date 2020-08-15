@@ -1,4 +1,5 @@
 ﻿using System;
+using Zion.Common2.Helpers;
 
 namespace Zion.Common2.Models
 {
@@ -61,16 +62,16 @@ namespace Zion.Common2.Models
 
         public virtual bool Validar()
         {
-            Zion.Common2.Helpers.PersistHelper.ClassToPersist(this);
+            ZionHelper.ClassToPersist(this);
             Validations.RemoveAllValidations();
 
             if (IdProduto == Guid.Empty)
                 Validations.AddValidation("IdProduto", "IdProduto não informado");
-            if (!Zion.Common2.Checks.ZionCheck.StringHasLength(Gtin, 0, 14))
+            if (!Checks.ZionCheck.StringHasLength(Gtin, 0, 14))
                 Validations.AddValidation("Gtin", "Gtin inválido");
-            if (Zion.Common2.Checks.ZionCheck.StringIsNullOrEmptyOrWhiteSpace(Descricao))
+            if (Checks.ZionCheck.StringIsNullOrEmptyOrWhiteSpace(Descricao))
                 Validations.AddValidation("Descricao", "Descrição não informada");
-            if (!Zion.Common2.Checks.ZionCheck.StringHasLength(Descricao, 1, 120))
+            if (!Checks.ZionCheck.StringHasLength(Descricao, 1, 120))
                 Validations.AddValidation("Descricao", "Descrição inválida");
 
             if (!ValueObjects.Ncm.IsValid(Ncm))

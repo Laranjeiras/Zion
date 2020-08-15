@@ -3,7 +3,7 @@ using System.Reflection;
 
 namespace Zion.Common2.Helpers
 {
-    public class PersistHelper
+    public partial class ZionHelper
     {
         public static string StringToPersist(string valor, bool toUpperCase = false, int size = -1)
         {
