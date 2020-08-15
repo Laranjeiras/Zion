@@ -5,9 +5,20 @@ namespace Zion.Common2.Assertions
 {
     public partial class ZionAssertion
     {
+        public static void PhoneIsValid(string phoneNumber, string message)
+        {
+            if (!Checks.ZionCheck.PhoneIsValid(phoneNumber))
+                throw new Exception(message);
+        }
+
         public static void EmailIsValid(string email, string message = "Email is invalid")
         {
-            if(!Regex.IsMatch(email, @"^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$"))
+            if (!Checks.ZionCheck.EmailValidation(email))
+                throw new Exception(message);
+        }
+        public static void ObjectIsNull(object value, string message = "Object is Null")
+        {
+            if (value == null)
                 throw new Exception(message);
         }
     }
