@@ -63,26 +63,26 @@ namespace Zion.Common2.Models
         public virtual bool Validar()
         {
             ZionHelper.ClassToPersist(this);
-            Validations.RemoveAllValidations();
+            Contract.RemoveAllNotifications();
 
             if (IdProduto == Guid.Empty)
-                Validations.AddValidation("IdProduto", "IdProduto não informado");
+                Contract.AddNotification("IdProduto", "IdProduto não informado");
             if (!Checks.ZionCheck.StringHasLength(Gtin, 0, 14))
-                Validations.AddValidation("Gtin", "Gtin inválido");
+                Contract.AddNotification("Gtin", "Gtin inválido");
             if (Checks.ZionCheck.StringIsNullOrEmptyOrWhiteSpace(Descricao))
-                Validations.AddValidation("Descricao", "Descrição não informada");
+                Contract.AddNotification("Descricao", "Descrição não informada");
             if (!Checks.ZionCheck.StringHasLength(Descricao, 1, 120))
-                Validations.AddValidation("Descricao", "Descrição inválida");
+                Contract.AddNotification("Descricao", "Descrição inválida");
 
             if (!ValueObjects.Ncm.IsValid(Ncm))
-                Validations.AddValidation("Ncm", "Ncm inválido");
+                Contract.AddNotification("Ncm", "Ncm inválido");
             //if (!(Zion.Common2.Checks.ZionCheck.StringHasLength(Ncm, 2, 2) || Zion.Common2.Checks.ZionCheck.StringHasLength(Ncm, 8, 8)))
-            //    Validations.AddValidation("Ncm", "Ncm inválido");
+            //    Validations.AddNotification("Ncm", "Ncm inválido");
 
             if (!ValueObjects.UCom.IsValid(UCom))
-                Validations.AddValidation("UCom", "Unidade Comercial inválida");
+                Contract.AddNotification("UCom", "Unidade Comercial inválida");
 
-            return Validations.Valid;
+            return Contract.Valid;
         }
     }
 }

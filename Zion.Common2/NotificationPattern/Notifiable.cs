@@ -9,7 +9,6 @@ namespace Zion.Common2.NotificationPattern
 
         public IReadOnlyCollection<Notification> Notifications { get { return _notifications; } }
 
-
         public void AddNotification(string property, string message)
         {
             _notifications.Add(new Notification(property, message));
